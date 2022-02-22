@@ -21,18 +21,13 @@ with open('CarParkPos', 'rb') as f:
     posList = pickle.load(f)
  
 width, height = 107, 48
-
-loop2 = 1
-loop3 = 1
  
 def checkParkingSpace(imgPro):
     global loop2
     global loop3
     spaceCounter = 0
-    loop1 = 1
     
     for pos in posList:
-        loop1 = loop1 + 1
         x, y = pos
  
         imgCrop = imgPro[y:y + height, x:x + width]
